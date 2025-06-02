@@ -10,6 +10,9 @@ async function main() {
   const showReports  = document.getElementById('showReports');
   const sortOrder    = document.getElementById('sortOrder');
 
+  // Se till att "Rekommenderad" är förvalt
+  sortOrder.value = 'recommended';
+
   let items;
   try {
     const res = await fetch('./data.json');
@@ -39,40 +42,50 @@ async function main() {
                         alt="PDF" loading="lazy">`;
     }
 
+    // Bygg HTML med öppen-knapp
     div.innerHTML = `
       ${previewHtml}
       <div class="info">
         <span class="title">${item.title}</span>
-        <span class="description">${item.description||''}</span>
-        <span class="tag">${item.tag||''}</span>
+        <span class="description">${item.description || ''}</span>
+        <span class="tag">${item.tag || ''}</span>
+        <button class="open-new" aria-label="Öppna i ny flik">↗</button>
       </div>`;
 
+    // Klick på hela rutan => visa i viewer
     div.addEventListener('click', () => selectItem(div, item));
     div.addEventListener('keydown', e => {
-      if (e.key==='Enter'||e.key===' ') selectItem(div, item);
+      if (e.key === 'Enter' || e.key === ' ') selectItem(div, item);
     });
+
+    // Klick på öppna-knappen => nytt fönster
+    const btn = div.querySelector('.open-new');
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      window.open(item.mp4 || item.src, '_blank', 'noopener');
+    });
+
     return div;
   }
 
-function sortItems(list) {
-  const mode = sortOrder.value = 'recommended';
-  if (mode === 'recommended') {
-    // sortera efter ditt nya order‐fält
-    list.sort((a, b) => (a.order || 0) - (b.order || 0));
-  } else if (mode === 'date') {
-    list.sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
-  } else if (mode === 'title') {
-    list.sort((a, b) => a.title.localeCompare(b.title));
+  function sortItems(list) {
+    const mode = sortOrder.value;
+    if (mode === 'recommended') {
+      list.sort((a, b) => (a.order || 0) - (b.order || 0));
+    } else if (mode === 'date') {
+      list.sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
+    } else if (mode === 'title') {
+      list.sort((a, b) => a.title.localeCompare(b.title));
+    }
+    // 'default' (Ursprunglig) behåller data.json-ordning
   }
-  // 'default' behåller listans ordning i data.json (ingen förändring)
-}
 
   function render() {
-    let featured = items.filter(i=>i.featured);
-    if (!featured.length) featured = items.filter(i=>i.type==='video').slice(0,3);
+    let featured = items.filter(i => i.featured);
+    if (!featured.length) featured = items.filter(i => i.type === 'video').slice(0, 3);
 
-    let reports = items.filter(i=>i.type==='report');
-    let others  = items.filter(i=>i.type==='video' && !featured.includes(i));
+    let reports = items.filter(i => i.type === 'report');
+    let others  = items.filter(i => i.type === 'video' && !featured.includes(i));
 
     sortItems(featured);
     sortItems(others);
@@ -82,11 +95,11 @@ function sortItems(list) {
     container.innerHTML    = '';
     reportList.innerHTML   = '';
 
-    featured.forEach(i=>featuredList.appendChild(makeItem(i)));
-    others.forEach(i=>container.appendChild(makeItem(i)));
-    reports.forEach(i=>reportList.appendChild(makeItem(i)));
+    featured.forEach(i => featuredList.appendChild(makeItem(i)));
+    others.forEach(i => container.appendChild(makeItem(i)));
+    reports.forEach(i => reportList.appendChild(makeItem(i)));
 
-    const first = featured[0]||others[0];
+    const first = featured[0] || others[0];
     if (first) selectItem(
       featured[0] ? featuredList.children[0] : container.children[0],
       first
@@ -97,60 +110,69 @@ function sortItems(list) {
     pauseCurrent();
     viewer.innerHTML = '';
 
-    // Embed in huvudvisaren
+    // Embed i huvudvisaren
     if (item.mp4) {
       const v = document.createElement('video');
-      v.controls=true; v.playsInline=true; v.src=item.mp4;
+      v.controls = true;
+      v.playsInline = true;
+      v.src = item.mp4;
       viewer.appendChild(v);
     } else {
       const iframe = document.createElement('iframe');
-      const sep = item.src.includes('?')?'&':'?';
-      iframe.src = item.src.includes('embed')?item.src:item.src+sep+'embed';
-      iframe.allow='autoplay; fullscreen';
-      iframe.allowFullscreen=true;
-      iframe.loading='lazy';
-      iframe.title=item.title;
+      const sep = item.src.includes('?') ? '&' : '?';
+      iframe.src = item.src.includes('embed') ? item.src : item.src + sep + 'embed';
+      iframe.allow = 'autoplay; fullscreen';
+      iframe.allowFullscreen = true;
+      iframe.loading = 'lazy';
+      iframe.title = item.title;
       viewer.appendChild(iframe);
     }
 
     // Mobil/padda: overlay-länk för nytt fönster
     if (window.innerWidth <= 900) {
       const link = document.createElement('a');
-      link.href   = item.mp4||item.src;
+      link.href = item.mp4 || item.src;
       link.target = '_blank';
-      link.rel    = 'noopener';
+      link.rel = 'noopener';
       Object.assign(link.style, {
-        position:'absolute', top:0, left:0, width:'100%', height:'100%', zIndex:10
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        zIndex: 10
       });
       viewer.appendChild(link);
     }
 
     // Markera aktiv
-    document.querySelectorAll('.sidebar-item').forEach(el=>el.classList.remove('active'));
+    document.querySelectorAll('.sidebar-item').forEach(el => el.classList.remove('active'));
     div.classList.add('active');
 
     // Mobilt scroll: flytta upp och scrolla in
     if (window.innerWidth <= 900) {
       const parent = div.parentNode;
       parent.prepend(div);
-      div.scrollIntoView({behavior:'smooth',block:'start'});
-      viewer.scrollIntoView({behavior:'smooth',block:'start'});
+      div.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      viewer.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 
   function pauseCurrent() {
-    const v = viewer.querySelector('video'); if(v) v.pause();
-    const i = viewer.querySelector('iframe'); if(i) i.src='';
+    const v = viewer.querySelector('video');
+    if (v) v.pause();
+    const i = viewer.querySelector('iframe');
+    if (i) i.src = '';
   }
 
   function filterAndRender() {
     render();
-    document.querySelectorAll('.sidebar-item').forEach(div=>{
+    document.querySelectorAll('.sidebar-item').forEach(div => {
       const t = div.dataset.type;
-      const isTop = div.parentNode.id==='featuredList';
+      const isTop = div.parentNode.id === 'featuredList';
       const keep = isTop ||
-                   (t==='video' && showVideos.checked) ||
-                   (t==='report' && showReports.checked);
+                   (t === 'video' && showVideos.checked) ||
+                   (t === 'report' && showReports.checked);
       div.classList.toggle('hidden', !keep);
     });
   }
