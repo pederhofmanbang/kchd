@@ -32,17 +32,17 @@ async function main() {
     div.dataset.type = item.type;
     div.dataset.src  = item.src;
 
-    // Visa alltid preview-bild om den finns
+    // Visa alltid preview‐bild om den finns
     let previewHtml;
     if (item.preview) {
       previewHtml = `<img src="${item.preview}" alt="Förhandsvisning" loading="lazy">`;
     } else {
-      // PDF-fallback
+      // PDF‐fallback
       previewHtml = `<img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg"
                         alt="PDF" loading="lazy">`;
     }
 
-    // Bygg HTML med öppen-knapp
+    // Bygg HTML med öppen‐knapp
     div.innerHTML = `
       ${previewHtml}
       <div class="info">
@@ -52,13 +52,13 @@ async function main() {
         <button class="open-new" aria-label="Öppna i ny flik">↗</button>
       </div>`;
 
-    // Klick på hela rutan => visa i viewer
+    // Klick på hela rutan ⇒ visa i viewer
     div.addEventListener('click', () => selectItem(div, item));
     div.addEventListener('keydown', e => {
       if (e.key === 'Enter' || e.key === ' ') selectItem(div, item);
     });
 
-    // Klick på öppna-knappen => nytt fönster
+    // Klick på öppna-knappen ⇒ nytt fönster
     const btn = div.querySelector('.open-new');
     btn.addEventListener('click', e => {
       e.stopPropagation();
@@ -77,7 +77,7 @@ async function main() {
     } else if (mode === 'title') {
       list.sort((a, b) => a.title.localeCompare(b.title));
     }
-    // 'default' (Ursprunglig) behåller data.json-ordning
+    // 'default' (Ursprunglig) behåller data.json‐ordning
   }
 
   function render() {
@@ -128,7 +128,7 @@ async function main() {
       viewer.appendChild(iframe);
     }
 
-    // Mobil/padda: overlay-länk för nytt fönster
+    // Mobil/padda: placera overlay‐länk högst upp så klick går till ny flik
     if (window.innerWidth <= 900) {
       const link = document.createElement('a');
       link.href = item.mp4 || item.src;
