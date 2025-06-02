@@ -157,7 +157,7 @@ header {
   flex-shrink: 0;
 }
 
-/* overlay-symbol ↗ */
+/* Ta bort tidigare pseudo‐pil 
 .sidebar-item::after {
   content: "↗";
   position: absolute;
@@ -168,6 +168,7 @@ header {
   padding: 2px;
   font-size: 1rem;
 }
+*/
 
 .info {
   flex: 1;
@@ -194,13 +195,19 @@ header {
   border-radius: 4px;
 }
 
+/* Nu visas pil‐knappen */
 .open-new {
   background: none;
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
   padding: 0;
-  margin-left: auto;
+  margin-left: 0.5rem;
+  color: #004c6c;
+}
+
+.open-new:hover {
+  color: #022a2a;
 }
 
 .hidden {
