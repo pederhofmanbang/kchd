@@ -1,0 +1,66 @@
+[
+  {
+    "titel": "Värde med projektförslag för vårddatahubb",
+    "beskrivning": "Nyttor och värde med föreslagna insatser",
+    "kategori": "rapport",
+    "delprojekt": [],
+    "datum": "2025-05-16",
+    "src": "rapporter/varde-projektforslag-varddatahubb-250516.pdf"
+  },
+  {
+    "titel": "Inceptionrapport",
+    "beskrivning": "Initial rapport för projektets uppstart",
+    "kategori": "rapport",
+    "delprojekt": [],
+    "datum": "2024-03-01",
+    "src": "rapporter/Deliverable1-Inception-report.pdf"
+  },
+  {
+    "titel": "Delprojekt 1: Variabler",
+    "beskrivning": "Definitioner och strukturering av variabler",
+    "kategori": "rapport",
+    "delprojekt": ["utredning-1"],
+    "datum": "2024-06-01",
+    "src": "rapporter/Delprojekt-1-Variabler.pdf"
+  },
+  {
+    "titel": "Delprojekt 2: Dataförmågor",
+    "beskrivning": "Beskrivning av datakapacitet och krav",
+    "kategori": "rapport",
+    "delprojekt": ["utredning-2"],
+    "datum": "2024-06-15",
+    "src": "rapporter/Delprojekt-2-dataformagor.pdf"
+  },
+  {
+    "titel": "Delprojekt 3: Användningsfall",
+    "beskrivning": "Exempel och analysbehov för vårdgenererad data",
+    "kategori": "rapport",
+    "delprojekt": [],
+    "datum": "2024-07-01",
+    "src": "rapporter/Delprojekt-3-Anvandningsfall.pdf"
+  },
+  {
+    "titel": "Delprojekt 4: Vårddatahubb",
+    "beskrivning": "Arkitektur och förslag på gemensam hubb",
+    "kategori": "rapport",
+    "delprojekt": [],
+    "datum": "2024-08-01",
+    "src": "rapporter/Delprojekt-4-Varddatahubb.pdf"
+  },
+  {
+    "titel": "Delprojekt 5: Kompetenscentrum",
+    "beskrivning": "Förslag på organisation och uppdrag",
+    "kategori": "rapport",
+    "delprojekt": [],
+    "datum": "2024-09-01",
+    "src": "rapporter/Delprojekt-5-Kompetenscentrum.pdf"
+  },
+  {
+    "titel": "Nulägesrapport",
+    "beskrivning": "Analys av nuläge i regionerna",
+    "kategori": "rapport",
+    "delprojekt": [],
+    "datum": "2024-05-01",
+    "src": "rapporter/Leverabel2-Nulägesrapport.pdf"
+  }
+]

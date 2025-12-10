@@ -2,218 +2,347 @@
 <html lang="sv">
 <head>
   <meta charset="UTF-8">
-  <title>Regiongemensam Vårddataprojekt</title>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
-  <style>
-    body {
-      font-family: 'Source Sans Pro', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #ffffff;
-      color: #222222;
-    }
-    header {
-      background-color: #377D7A;
-      color: white;
-      padding: 1rem 2rem;
-      text-align: center;
-    }
-    .disclaimer {
-      background-color: #ffffff;
-      color: #222222;
-      border-left: 5px solid #FFA500;
-      margin: 1rem auto;
-      padding: 1rem;
-      max-width: 960px;
-      font-size: 0.95rem;
-      text-align: left;
-    }
-    .disclaimer a {
-      color: #004c6c;
-      text-decoration: underline;
-    }
-    .filter, .search-bar, .search-info {
-      text-align: center;
-      margin: 1rem;
-    }
-    .main-layout {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 2rem;
-    }
-    .sidebar {
-      width: 420px;
-      overflow-y: auto;
-      border-right: 1px solid #ccc;
-      padding: 1rem;
-    }
-    .sidebar-item {
-      display: flex;
-      flex-direction: row;
-      gap: 1rem;
-      margin-bottom: 1rem;
-      align-items: center;
-      cursor: pointer;
-      border-left: 4px solid transparent;
-      padding-left: 4px;
-    }
-    .sidebar-item.active {
-      background-color: #f0f7f8;
-      border-left: 4px solid #377D7A;
-    }
-    .sidebar-item iframe, .sidebar-item img {
-      width: 66%;
-      max-width: 140px;
-      border-radius: 4px;
-    }
-    .info {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .title {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #004c6c;
-    }
-    .description, .tag, .status, .date {
-      font-size: 0.85rem;
-    }
-    .tag {
-      background-color: #e0f0f8;
-      color: #004c6c;
-      padding: 2px 6px;
-      border-radius: 4px;
-      display: inline-block;
-      margin-top: 0.3rem;
-      width: fit-content;
-    }
-    .open-new {
-      display: inline-block;
-      font-size: 0.75rem;
-      margin-top: 4px;
-      color: #004c6c;
-      cursor: pointer;
-      text-decoration: underline;
-    }
-    .content-display {
-      flex: 1;
-      padding: 1rem;
-      max-width: 50%;
-    }
-    .content-display iframe {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      border: none;
-    }
-    @media screen and (max-width: 900px) {
-      .main-layout {
-        flex-direction: column;
-      }
-      .content-display {
-        max-width: 100%;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kompetenscentrum hälsodata - regiongemensam vårddatahantering för bättre hälso- och sjukvård">
+  <title>Kompetenscentrum Hälsodata</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header>
-    <h1>Regiongemensam vårddatahantering</h1>
-    <p>Kortfilmer och rapporter från projektet</p>
-  </header>
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Huvudnavigation">
+    <div class="nav__container">
+      <a href="/" class="nav__brand">
+        <div class="nav__logo">KC</div>
+        <span>Kompetenscentrum Hälsodata</span>
+      </a>
+      <button class="nav__toggle" aria-label="Öppna meny" aria-expanded="false">
+        <span class="nav__toggle-icon"></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#delprojekt" class="nav__link">Delprojekt</a></li>
+        <li><a href="#dokument" class="nav__link">Dokument</a></li>
+        <li><a href="#om" class="nav__link">Om oss</a></li>
+        <li><a href="#kontakt" class="nav__link">Kontakt</a></li>
+        <li><a href="projektet.html" class="nav__link">Projektet</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <div class="disclaimer">
-    <strong>OBS:</strong> På denna sida återfinns test- och betaleveranser från projektet. De officiella resultaten finns här: <a href="https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/regiongemensamvarddatahantering.89146.html" target="_blank" rel="noopener">kunskapsstyrningvard.se</a>
-  </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__content">
+        <span class="hero__badge">Beta</span>
+        <h1 class="hero__title">Kompetenscentrum Hälsodata</h1>
+        <p class="hero__subtitle">
+          Vi bygger framtidens regiongemensamma vårddatahantering genom piloter och utredningar
+          som möjliggör bättre analys och uppföljning av hälso- och sjukvården.
+        </p>
+        <div class="hero__actions">
+          <a href="#delprojekt" class="btn btn--primary">Utforska delprojekt</a>
+          <a href="projektet.html" class="btn btn--secondary">Se hela projektet</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <div class="filter">
-    <label><input type="checkbox" id="showVideos" checked> Visa filmer</label>
-    <label><input type="checkbox" id="showReports" checked> Visa rapporter</label>
-    <button onclick="resetOrder()">Återställ ordning</button>
-    <label for="sortSelect">Sortera:</label>
-    <select id="sortSelect" onchange="loadContent()">
-      <option value="default">Ursprungsordning</option>
-      <option value="date">Datum (senaste först)</option>
-      <option value="status">Status</option>
-    </select>
-  </div>
-
-  <div class="search-bar">
-    <input type="text" id="searchInput" placeholder="Sök efter titel, beskrivning eller tagg...">
-  </div>
-  <div class="search-info" id="resultCount"></div>
-
-  <div class="main-layout">
-    <aside class="sidebar" id="itemList"></aside>
-    <div class="content-display" id="viewer">
-      <iframe src="" allowfullscreen></iframe>
+  <!-- Disclaimer -->
+  <div class="container">
+    <div class="alert alert--warning">
+      <svg class="alert__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+      </svg>
+      <div class="alert__content">
+        <div class="alert__title">Beta-version</div>
+        <p>Detta är en testmiljö för Kompetenscentrum hälsodata. Officiella resultat och information finns på
+          <a href="https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/regiongemensamvarddatahantering.89146.html" target="_blank" rel="noopener">kunskapsstyrningvard.se</a>
+        </p>
+      </div>
     </div>
   </div>
 
-  <script>
-    let currentActiveSrc = null;
-    function createItem(item) {
-      const container = document.getElementById('itemList');
-      const viewer = document.getElementById('viewer').querySelector('iframe');
-      const div = document.createElement('div');
-      div.className = 'sidebar-item';
-      div.dataset.type = item.type;
-      div.dataset.src = item.src;
+  <!-- Delprojekt Section -->
+  <section id="delprojekt" class="section">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">Våra delprojekt</h2>
+        <p class="section-subtitle">
+          Vi driver fem delprojekt inom ramen för kompetenscentrumets uppbyggnad:
+          två piloter och tre utredningar.
+        </p>
+      </div>
 
-      const preview = item.preview
-        ? `<img src="${item.preview}" alt="Förhandsvisning">`
-        : item.type === 'video'
-          ? `<iframe src="${item.src}" allowfullscreen></iframe>`
-          : `<img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="PDF">`;
+      <div class="projects-grid">
+        <!-- Pilot 1 -->
+        <article class="project-card project-card--pilot">
+          <div class="project-card__header">
+            <span class="project-card__type">Pilot</span>
+            <h3 class="project-card__title">Väntetider och Patientregistret</h3>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__description">
+              Pilotprojekt som undersöker möjligheterna att förbättra hanteringen av väntetidsdata
+              i samverkan med Patientregistret hos Socialstyrelsen.
+            </p>
+            <div class="project-card__status">
+              <span class="project-card__status-dot project-card__status-dot--active"></span>
+              <span>Pågående</span>
+            </div>
+          </div>
+          <div class="project-card__footer">
+            <a href="#" class="project-card__link">Läs mer</a>
+          </div>
+        </article>
 
-      div.innerHTML = `
-        ${preview}
-        <div class="info">
-          <span class="title">${item.title}</span>
-          <span class="description">${item.description}</span>
-          <span class="tag">${item.tag}</span>
+        <!-- Pilot 2 -->
+        <article class="project-card project-card--pilot">
+          <div class="project-card__header">
+            <span class="project-card__type">Pilot</span>
+            <h3 class="project-card__title">Ramverk för Data Management och Data Governance</h3>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__description">
+              Pilot för att utveckla och testa ett gemensamt ramverk för datahantering och
+              datastyrning inom regionernas vårddatahantering.
+            </p>
+            <div class="project-card__status">
+              <span class="project-card__status-dot project-card__status-dot--active"></span>
+              <span>Pågående</span>
+            </div>
+          </div>
+          <div class="project-card__footer">
+            <a href="#" class="project-card__link">Läs mer</a>
+          </div>
+        </article>
+
+        <!-- Utredning 1 -->
+        <article class="project-card project-card--utredning">
+          <div class="project-card__header">
+            <span class="project-card__type">Utredning</span>
+            <h3 class="project-card__title">Variabelharmonisering</h3>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__description">
+              Utredning av hur variabeldefinitioner kan harmoniseras mellan regioner för att
+              möjliggöra jämförbara analyser och uppföljningar.
+            </p>
+            <div class="project-card__status">
+              <span class="project-card__status-dot project-card__status-dot--active"></span>
+              <span>Pågående</span>
+            </div>
+          </div>
+          <div class="project-card__footer">
+            <a href="#" class="project-card__link">Läs mer</a>
+          </div>
+        </article>
+
+        <!-- Utredning 2 -->
+        <article class="project-card project-card--utredning">
+          <div class="project-card__header">
+            <span class="project-card__type">Utredning</span>
+            <h3 class="project-card__title">Datakatalog</h3>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__description">
+              Utredning av hur en gemensam datakatalog kan byggas upp för att ge överblick
+              över tillgängliga datamängder och deras egenskaper.
+            </p>
+            <div class="project-card__status">
+              <span class="project-card__status-dot project-card__status-dot--active"></span>
+              <span>Pågående</span>
+            </div>
+          </div>
+          <div class="project-card__footer">
+            <a href="#" class="project-card__link">Läs mer</a>
+          </div>
+        </article>
+
+        <!-- Utredning 3 -->
+        <article class="project-card project-card--utredning">
+          <div class="project-card__header">
+            <span class="project-card__type">Utredning</span>
+            <h3 class="project-card__title">Juridiska förutsättningar</h3>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__description">
+              Utredning av de juridiska förutsättningarna för regiongemensam vårddatahantering,
+              inklusive GDPR, patientdatalagen och sekretessbestämmelser.
+            </p>
+            <div class="project-card__status">
+              <span class="project-card__status-dot project-card__status-dot--active"></span>
+              <span>Pågående</span>
+            </div>
+          </div>
+          <div class="project-card__footer">
+            <a href="#" class="project-card__link">Läs mer</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Documents Section -->
+  <section id="dokument" class="section documents">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">Dokument</h2>
+        <p class="section-subtitle">
+          Rapporter, presentationer och beslutsunderlag från vårt arbete.
+        </p>
+      </div>
+
+      <div class="documents__filters">
+        <button class="filter-btn filter-btn--active" data-filter="all">Alla</button>
+        <button class="filter-btn" data-filter="rapport">Rapporter</button>
+        <button class="filter-btn" data-filter="presentation">Presentationer</button>
+        <button class="filter-btn" data-filter="beslutsunderlag">Beslutsunderlag</button>
+        <button class="filter-btn" data-filter="pilot-1">Pilot: Väntetider</button>
+        <button class="filter-btn" data-filter="pilot-2">Pilot: Ramverk</button>
+        <button class="filter-btn" data-filter="utredning-1">Variabelharmonisering</button>
+        <button class="filter-btn" data-filter="utredning-2">Datakatalog</button>
+        <button class="filter-btn" data-filter="utredning-3">Juridik</button>
+      </div>
+
+      <div class="documents__grid" id="documentsGrid">
+        <!-- Documents will be loaded dynamically -->
+      </div>
+
+      <div class="text-center" style="margin-top: var(--spacing-8);">
+        <p style="color: var(--color-gray-500);">Dokument laddas från <code>dokument/dokument.json</code></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="om" class="section">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">Om Kompetenscentrum</h2>
+        <p class="section-subtitle">
+          Kompetenscentrum hälsodata är ett initiativ för att stärka regionernas förmåga
+          att hantera och analysera vårddata på ett säkert och effektivt sätt.
+        </p>
+      </div>
+
+      <div class="about__grid">
+        <div class="about-card">
+          <div class="about-card__icon">
+            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="about-card__title">Säker datahantering</h3>
+          <p class="about-card__text">
+            Vi utvecklar metoder för säker hantering av känsliga vårddata enligt gällande regelverk.
+          </p>
         </div>
-      `;
 
-      div.addEventListener('click', () => {
-        viewer.src = item.src;
-      });
+        <div class="about-card">
+          <div class="about-card__icon">
+            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h3 class="about-card__title">Regional samverkan</h3>
+          <p class="about-card__text">
+            Alla 21 regioner samverkar för att skapa gemensamma lösningar och standarder.
+          </p>
+        </div>
 
-      container.appendChild(div);
-    }
+        <div class="about-card">
+          <div class="about-card__icon">
+            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="about-card__title">Bättre uppföljning</h3>
+          <p class="about-card__text">
+            Målet är att möjliggöra bättre uppföljning och analys för en mer effektiv vård.
+          </p>
+        </div>
 
-    async function loadContent() {
-      const response = await fetch('data.json');
-      const content = await response.json();
-      const container = document.getElementById('itemList');
-      const viewer = document.getElementById('viewer').querySelector('iframe');
+        <div class="about-card">
+          <div class="about-card__icon">
+            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <h3 class="about-card__title">Kunskapsdelning</h3>
+          <p class="about-card__text">
+            Vi delar kunskap och erfarenheter mellan regioner för ökad digital mognad.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      container.innerHTML = '';
+  <!-- Contact Section -->
+  <section id="kontakt" class="section contact">
+    <div class="container">
+      <div class="contact__content">
+        <h2 class="contact__title">Kontakta oss</h2>
+        <p class="contact__text">
+          Har du frågor om Kompetenscentrum hälsodata eller våra delprojekt?
+          Tveka inte att höra av dig.
+        </p>
+        <a href="mailto:kchd@example.se" class="contact__email">
+          <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          kchd@example.se
+        </a>
+      </div>
+    </div>
+  </section>
 
-      content.forEach(item => createItem(item));
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">Kompetenscentrum Hälsodata</div>
+          <p class="footer__text">
+            Ett initiativ för regiongemensam vårddatahantering inom ramen för
+            nationell kunskapsstyrning.
+          </p>
+        </div>
+        <div>
+          <div class="footer__title">Snabblänkar</div>
+          <ul class="footer__links">
+            <li><a href="#delprojekt" class="footer__link">Delprojekt</a></li>
+            <li><a href="#dokument" class="footer__link">Dokument</a></li>
+            <li><a href="#om" class="footer__link">Om oss</a></li>
+            <li><a href="#kontakt" class="footer__link">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__title">Projektet</div>
+          <ul class="footer__links">
+            <li><a href="projektet.html" class="footer__link">Regiongemensam vårddatahantering</a></li>
+            <li><a href="https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/regiongemensamvarddatahantering.89146.html" target="_blank" rel="noopener" class="footer__link">Kunskapsstyrning (officiell)</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__title">Delprojekt</div>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Väntetider och Patientregistret</a></li>
+            <li><a href="#" class="footer__link">Ramverk DM & DG</a></li>
+            <li><a href="#" class="footer__link">Variabelharmonisering</a></li>
+            <li><a href="#" class="footer__link">Datakatalog</a></li>
+            <li><a href="#" class="footer__link">Juridiska förutsättningar</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Kompetenscentrum Hälsodata. Alla rättigheter förbehållna.</p>
+      </div>
+    </div>
+  </footer>
 
-      viewer.src = content.find(c => c.type === 'video')?.src || '';
-    }
-
-    document.getElementById('showVideos').addEventListener('change', filterItems);
-    document.getElementById('showReports').addEventListener('change', filterItems);
-
-    function filterItems() {
-      const showVideos = document.getElementById('showVideos').checked;
-      const showReports = document.getElementById('showReports').checked;
-      const items = document.querySelectorAll('.sidebar-item');
-
-      items.forEach(item => {
-        const type = item.dataset.type;
-        const visible = (type === 'video' && showVideos) || (type === 'report' && showReports);
-        item.style.display = visible ? 'flex' : 'none';
-      });
-    }
-
-    loadContent();
-  </script>
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
 </body>
 </html>
