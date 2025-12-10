@@ -16,8 +16,8 @@
   {
     "type": "video",
     "src": "https://www.canva.com/design/DAGn0V6Cf7Y/6Z_NK2jHgB_IR4-fgPc94A/watch?embed",
-    "title": "Thanks to EU",
-    "description": "Acknowledgement to support from TSI",
+    "title": "Thanks to EU and regions",
+    "description": "Acknowledgement to TSI and all involved",
     "tag": "EU",
     "preview": "bilder/Thanks.JPG",
     "featured": true
@@ -117,8 +117,8 @@
     "src": "https://www.canva.com/design/DAGnzDUUwzs/4TNeG1RVcHSUWCvPE6a8pg/watch?embed",
     "title": "7. Användningsfall",
     "description": "Introduktion till två användningsfall som kan hanteras av vårddatahubben och kompetenscentrumet",
-    "tag": "",
-    "preview": "bilder/Anvandningsfall.JPG",
+    "tag": "Användning",
+    "preview": "bilder/Två anv.JPG",
     "order": 7
   },
   {
