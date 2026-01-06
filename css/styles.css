@@ -1653,3 +1653,99 @@ p {
   background-color: var(--color-primary);
   color: var(--color-white);
 }
+
+.btn--small {
+  padding: var(--spacing-2) var(--spacing-4);
+  font-size: var(--font-size-sm);
+  border-radius: var(--radius-md);
+}
+
+/* ==========================================================================
+   Info Banner (OBS-text under logo)
+   ========================================================================== */
+
+.info-banner {
+  background-color: var(--color-gray-100);
+  border-bottom: 1px solid var(--color-gray-200);
+  padding: var(--spacing-3) 0;
+}
+
+.info-banner__text {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  text-align: center;
+  margin: 0;
+}
+
+.info-banner__text a {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.info-banner__text a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* ==========================================================================
+   Background Card - Report Link
+   ========================================================================== */
+
+.background-card__report-link {
+  display: inline-block;
+  margin-top: var(--spacing-4);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+  padding: var(--spacing-2) var(--spacing-4);
+  background-color: rgba(55, 125, 122, 0.1);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.background-card__report-link:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.background-card--hur .background-card__report-link {
+  color: var(--color-secondary);
+  background-color: rgba(0, 76, 108, 0.1);
+}
+
+.background-card--hur .background-card__report-link:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+/* ==========================================================================
+   Background Card - Links variant (6th card)
+   ========================================================================== */
+
+.background-card--links {
+  border-top-color: var(--color-accent);
+  background-color: var(--color-gray-50);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.background-card--links .background-card__header {
+  margin-bottom: var(--spacing-4);
+}
+
+.background-card--links .background-card__title {
+  color: var(--color-gray-700);
+}
+
+.background-card__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.background-card__buttons .btn {
+  width: 100%;
+  text-align: center;
+}
