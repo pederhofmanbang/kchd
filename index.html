@@ -14,7 +14,7 @@
   <!-- Navigation -->
   <nav class="nav" role="navigation" aria-label="Huvudnavigation">
     <div class="nav__container">
-      <a href="/" class="nav__brand">
+      <a href="index.html" class="nav__brand">
         <div class="nav__logo">KC</div>
         <span>Kompetenscentrum Hälsodata</span>
       </a>
@@ -22,11 +22,21 @@
         <span class="nav__toggle-icon"></span>
       </button>
       <ul class="nav__links" id="navLinks">
-        <li><a href="#delprojekt" class="nav__link">Delprojekt</a></li>
-        <li><a href="#dokument" class="nav__link">Dokument</a></li>
+        <li class="nav__dropdown">
+          <a href="#delprojekt" class="nav__link nav__link--dropdown">Delprojekt</a>
+          <ul class="nav__dropdown-menu">
+            <li><a href="pilot-vantetider.html" class="nav__dropdown-link"><span class="nav__dropdown-tag nav__dropdown-tag--pilot">Pilot</span>Väntetider och PAR</a></li>
+            <li><a href="pilot-ramverk.html" class="nav__dropdown-link"><span class="nav__dropdown-tag nav__dropdown-tag--pilot">Pilot</span>Ramverk DM & DG</a></li>
+            <li><a href="utredning-variabelharmonisering.html" class="nav__dropdown-link"><span class="nav__dropdown-tag nav__dropdown-tag--utredning">Utredning</span>Variabelharmonisering</a></li>
+            <li><a href="utredning-metadatakatalog.html" class="nav__dropdown-link"><span class="nav__dropdown-tag nav__dropdown-tag--utredning">Utredning</span>Metadatakatalog</a></li>
+            <li><a href="utredning-juridik.html" class="nav__dropdown-link"><span class="nav__dropdown-tag nav__dropdown-tag--utredning">Utredning</span>Juridiska förutsättningar</a></li>
+          </ul>
+        </li>
+        <li><a href="#tidsplan" class="nav__link">Tidsplan</a></li>
         <li><a href="#om" class="nav__link">Om oss</a></li>
+        <li><a href="#samverkan" class="nav__link">Samverkan</a></li>
+        <li><a href="#dokument" class="nav__link">Dokument</a></li>
         <li><a href="#kontakt" class="nav__link">Kontakt</a></li>
-        <li><a href="projektet.html" class="nav__link">Projektet</a></li>
       </ul>
     </div>
   </nav>
@@ -38,12 +48,11 @@
         <span class="hero__badge">Beta</span>
         <h1 class="hero__title">Kompetenscentrum Hälsodata</h1>
         <p class="hero__subtitle">
-          Vi bygger framtidens regiongemensamma vårddatahantering genom piloter och utredningar
-          som möjliggör bättre analys och uppföljning av hälso- och sjukvården.
+          Kompetenscentrum för regiongemensam hälsodatahantering (KCHD) är under uppbyggnad och har som mål att bli Sveriges regioners gemensamma resurs för att samordna, utveckla och tillgängliggöra hälsodata. Vi skapar förutsättningar för bättre styrning, uppföljning, analys, forskning och innovation inom hälso- och sjukvården.
         </p>
         <div class="hero__actions">
           <a href="#delprojekt" class="btn btn--primary">Utforska delprojekt</a>
-          <a href="projektet.html" class="btn btn--secondary">Se hela projektet</a>
+          <a href="#vision" class="btn btn--secondary">Läs om vår vision</a>
         </div>
       </div>
     </div>
@@ -56,13 +65,66 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
       </svg>
       <div class="alert__content">
-        <div class="alert__title">Beta-version</div>
-        <p>Detta är en testmiljö för Kompetenscentrum hälsodata. Officiella resultat och information finns på
+        <div class="alert__title">Informationssida under uppbyggnad</div>
+        <p>Detta är en informationssida under uppbyggnad. Officiell information och beslutsdokument finns på
           <a href="https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/regiongemensamvarddatahantering.89146.html" target="_blank" rel="noopener">kunskapsstyrningvard.se</a>
         </p>
       </div>
     </div>
   </div>
+
+  <!-- Vision och mål Section -->
+  <section id="vision" class="section section--gray">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">Vision och mål</h2>
+      </div>
+
+      <div class="vision__content">
+        <blockquote class="vision__quote">
+          <p>"KCHD ska vara den gemensamma arenan för regionerna när det gäller hälsodata för sekundäranvändning – en nationell nod som säkerställer att data kan användas på ett likvärdigt, säkert och effektivt sätt."</p>
+        </blockquote>
+
+        <div class="goals">
+          <h3 class="goals__title">Mål 2025–2026</h3>
+          <div class="goals__grid">
+            <div class="goal-card">
+              <div class="goal-card__icon">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                </svg>
+              </div>
+              <p>Etablera en struktur för regiongemensam vårddatahantering</p>
+            </div>
+            <div class="goal-card">
+              <div class="goal-card__icon">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                </svg>
+              </div>
+              <p>Utveckla arbetsformer mellan KCHD, regionerna och andra aktörer</p>
+            </div>
+            <div class="goal-card">
+              <div class="goal-card__icon">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <p>Genom pilotprojekt visa hur datakvalitet kan förbättras och regionernas rådighet över sin egen data kan stärkas</p>
+            </div>
+            <div class="goal-card">
+              <div class="goal-card__icon">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                </svg>
+              </div>
+              <p>Bidra till förberedelserna för en framtida vårddatahubb</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Delprojekt Section -->
   <section id="delprojekt" class="section">
@@ -70,8 +132,7 @@
       <div class="text-center">
         <h2 class="section-title">Våra delprojekt</h2>
         <p class="section-subtitle">
-          Vi driver fem delprojekt inom ramen för kompetenscentrumets uppbyggnad:
-          två piloter och tre utredningar.
+          Vi driver fem delprojekt inom ramen för kompetenscentrumets uppbyggnad: två piloter och tre utredningar. Klicka på respektive projekt för att läsa mer om syfte, aktiviteter och progress.
         </p>
       </div>
 
@@ -84,8 +145,7 @@
           </div>
           <div class="project-card__body">
             <p class="project-card__description">
-              Pilotprojekt som undersöker möjligheterna att förbättra hanteringen av väntetidsdata
-              i samverkan med Patientregistret hos Socialstyrelsen.
+              Pilotprojekt som visar hur regionerna kan tillgängliggöra väntetidsdata på ett lagenligt och effektivt sätt.
             </p>
             <div class="project-card__status">
               <span class="project-card__status-dot project-card__status-dot--active"></span>
@@ -93,7 +153,7 @@
             </div>
           </div>
           <div class="project-card__footer">
-            <a href="#" class="project-card__link">Läs mer</a>
+            <a href="pilot-vantetider.html" class="project-card__link">Läs mer</a>
           </div>
         </article>
 
@@ -101,12 +161,11 @@
         <article class="project-card project-card--pilot">
           <div class="project-card__header">
             <span class="project-card__type">Pilot</span>
-            <h3 class="project-card__title">Ramverk för Data Management och Data Governance</h3>
+            <h3 class="project-card__title">Ramverk för Data Management</h3>
           </div>
           <div class="project-card__body">
             <p class="project-card__description">
-              Pilot för att utveckla och testa ett gemensamt ramverk för datahantering och
-              datastyrning inom regionernas vårddatahantering.
+              Pilot för att utveckla och testa gemensamma principer för datastyrning och datahantering.
             </p>
             <div class="project-card__status">
               <span class="project-card__status-dot project-card__status-dot--active"></span>
@@ -114,7 +173,7 @@
             </div>
           </div>
           <div class="project-card__footer">
-            <a href="#" class="project-card__link">Läs mer</a>
+            <a href="pilot-ramverk.html" class="project-card__link">Läs mer</a>
           </div>
         </article>
 
@@ -126,8 +185,7 @@
           </div>
           <div class="project-card__body">
             <p class="project-card__description">
-              Utredning av hur variabeldefinitioner kan harmoniseras mellan regioner för att
-              möjliggöra jämförbara analyser och uppföljningar.
+              Samarbete med Socialstyrelsen för att enas om gemensamma definitioner av variabler.
             </p>
             <div class="project-card__status">
               <span class="project-card__status-dot project-card__status-dot--active"></span>
@@ -135,7 +193,7 @@
             </div>
           </div>
           <div class="project-card__footer">
-            <a href="#" class="project-card__link">Läs mer</a>
+            <a href="utredning-variabelharmonisering.html" class="project-card__link">Läs mer</a>
           </div>
         </article>
 
@@ -143,12 +201,11 @@
         <article class="project-card project-card--utredning">
           <div class="project-card__header">
             <span class="project-card__type">Utredning</span>
-            <h3 class="project-card__title">Datakatalog</h3>
+            <h3 class="project-card__title">Metadatakatalog</h3>
           </div>
           <div class="project-card__body">
             <p class="project-card__description">
-              Utredning av hur en gemensam datakatalog kan byggas upp för att ge överblick
-              över tillgängliga datamängder och deras egenskaper.
+              Utredning av hur en gemensam metadatakatalog kan ge överblick över tillgängliga datamängder.
             </p>
             <div class="project-card__status">
               <span class="project-card__status-dot project-card__status-dot--active"></span>
@@ -156,7 +213,7 @@
             </div>
           </div>
           <div class="project-card__footer">
-            <a href="#" class="project-card__link">Läs mer</a>
+            <a href="utredning-metadatakatalog.html" class="project-card__link">Läs mer</a>
           </div>
         </article>
 
@@ -168,8 +225,7 @@
           </div>
           <div class="project-card__body">
             <p class="project-card__description">
-              Utredning av de juridiska förutsättningarna för regiongemensam vårddatahantering,
-              inklusive GDPR, patientdatalagen och sekretessbestämmelser.
+              Utredning av de legala förutsättningarna för regiongemensam vårddatahantering.
             </p>
             <div class="project-card__status">
               <span class="project-card__status-dot project-card__status-dot--active"></span>
@@ -177,15 +233,201 @@
             </div>
           </div>
           <div class="project-card__footer">
-            <a href="#" class="project-card__link">Läs mer</a>
+            <a href="utredning-juridik.html" class="project-card__link">Läs mer</a>
           </div>
         </article>
       </div>
     </div>
   </section>
 
+  <!-- Tidsplan Section -->
+  <section id="tidsplan" class="section section--gray">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">Tidsplan 2025–2026</h2>
+        <p class="section-subtitle">
+          Översikt över viktiga milstolpar och fokusområden under uppbyggnaden av KCHD.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__item">
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <div class="timeline__period">Oktober–december 2025</div>
+            <div class="timeline__focus">Etablering av ny NAG, start av väntetidspilot, uppstart av övriga arbetsområden</div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <div class="timeline__period">Januari–juni 2026</div>
+            <div class="timeline__focus">Genomförande av pilotprojekt, samverkan med myndigheter, involvering av leverantörer</div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <div class="timeline__period">Juli–september 2026</div>
+            <div class="timeline__focus">Fördjupning och breddning av piloterna, integrering av resultat i arbetssätt</div>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <div class="timeline__period">Oktober–december 2026</div>
+            <div class="timeline__focus">Samlad utvärdering, rapportering och förslag till fortsatt utveckling</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="om" class="section">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">Om Kompetenscentrum</h2>
+        <p class="section-subtitle">
+          Kompetenscentrum för regiongemensam hälsodatahantering (KCHD) etablerades efter beslut i Nationell samverkansgrupp hälsodata (NSG HD) den 19 juni 2025. KCHD är en del av Nationellt system för kunskapsstyrning hälso- och sjukvård och drivs av regionerna i samverkan, med samordning från SKR.
+        </p>
+        <p class="section-subtitle" style="margin-top: var(--spacing-4);">
+          Bakgrunden är en växande efterfrågan på högkvalitativa data för styrning, uppföljning, analys, forskning och innovation – i kombination med nya krav från EU genom förordningen om det europeiska hälsodataområdet (EHDS).
+        </p>
+      </div>
+
+      <div class="about__grid">
+        <div class="about-card">
+          <div class="about-card__icon">
+            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="about-card__title">Datakvalitet och juridik</h3>
+          <p class="about-card__text">
+            Vi arbetar med variabelharmonisering, metadatahantering och juridiska frågeställningar för att säkerställa laglig och säker hantering av hälsodata.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <div class="about-card__icon">
+            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h3 class="about-card__title">21 regioner i samverkan</h3>
+          <p class="about-card__text">
+            Alla Sveriges regioner samverkar genom KCHD. Den operativa kärnan utgörs av en nationell arbetsgrupp (NAG) med representanter från varje sjukvårdsregion.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <div class="about-card__icon">
+            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
+            </svg>
+          </div>
+          <h3 class="about-card__title">Sekundäranvändning av data</h3>
+          <p class="about-card__text">
+            Vi möjliggör användning av hälsodata för styrning, uppföljning, analys, forskning och AI-tillämpningar – så kallad sekundäranvändning.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <div class="about-card__icon">
+            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="about-card__title">EU och EHDS-förberedelser</h3>
+          <p class="about-card__text">
+            KCHD bidrar till att förbereda regionerna för den europeiska förordningen om hälsodata (EHDS) och samverkar med myndigheter för en gemensam riktning.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Samverkan Section -->
+  <section id="samverkan" class="section section--gray">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">Samverkan</h2>
+        <p class="section-subtitle">
+          KCHD arbetar i nära samverkan med ett brett ekosystem av aktörer för att säkerställa en gemensam riktning för Sveriges hälsodatahantering.
+        </p>
+      </div>
+
+      <div class="collaboration__grid">
+        <div class="collaboration-card">
+          <div class="collaboration-card__icon">
+            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+          </div>
+          <h3 class="collaboration-card__title">Myndigheter</h3>
+          <p class="collaboration-card__text">
+            <strong>I första hand:</strong> Socialstyrelsen, E-hälsomyndigheten, Statistiska centralbyrån (SCB)
+          </p>
+          <p class="collaboration-card__text">
+            <strong>Även:</strong> Integritetsskyddsmyndigheten (IMY), Inspektionen för vård och omsorg (IVO), Läkemedelsverket, Vetenskapsrådet, Folkhälsomyndigheten och andra myndigheter som påverkas av EHDS
+          </p>
+        </div>
+
+        <div class="collaboration-card">
+          <div class="collaboration-card__icon">
+            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+            </svg>
+          </div>
+          <h3 class="collaboration-card__title">Regionernas digitaliseringsnätverk och Inera</h3>
+          <p class="collaboration-card__text">
+            Samverkan kring utredning av vårddatahubb
+          </p>
+        </div>
+
+        <div class="collaboration-card">
+          <div class="collaboration-card__icon">
+            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h3 class="collaboration-card__title">Leverantörer</h3>
+          <p class="collaboration-card__text">
+            Cambio, Inera med flera
+          </p>
+        </div>
+
+        <div class="collaboration-card">
+          <div class="collaboration-card__icon">
+            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="collaboration-card__title">Regiongemensam AI-satsning</h3>
+          <p class="collaboration-card__text">
+            Samverkan kring datatillgång för AI-tillämpningar inom sjukvården
+          </p>
+        </div>
+
+        <div class="collaboration-card collaboration-card--wide">
+          <div class="collaboration-card__icon">
+            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+            </svg>
+          </div>
+          <h3 class="collaboration-card__title">Övriga</h3>
+          <p class="collaboration-card__text">
+            Nationella kvalitetsregister, nationella programområden, universitet, forskarsamhället, EHDS-arbeten
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Documents Section -->
-  <section id="dokument" class="section documents">
+  <section id="dokument" class="section">
     <div class="container">
       <div class="text-center">
         <h2 class="section-title">Dokument</h2>
@@ -202,7 +444,7 @@
         <button class="filter-btn" data-filter="pilot-1">Pilot: Väntetider</button>
         <button class="filter-btn" data-filter="pilot-2">Pilot: Ramverk</button>
         <button class="filter-btn" data-filter="utredning-1">Variabelharmonisering</button>
-        <button class="filter-btn" data-filter="utredning-2">Datakatalog</button>
+        <button class="filter-btn" data-filter="utredning-2">Metadatakatalog</button>
         <button class="filter-btn" data-filter="utredning-3">Juridik</button>
       </div>
 
@@ -216,84 +458,26 @@
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="om" class="section">
-    <div class="container">
-      <div class="text-center">
-        <h2 class="section-title">Om Kompetenscentrum</h2>
-        <p class="section-subtitle">
-          Kompetenscentrum hälsodata är ett initiativ för att stärka regionernas förmåga
-          att hantera och analysera vårddata på ett säkert och effektivt sätt.
-        </p>
-      </div>
-
-      <div class="about__grid">
-        <div class="about-card">
-          <div class="about-card__icon">
-            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-            </svg>
-          </div>
-          <h3 class="about-card__title">Säker datahantering</h3>
-          <p class="about-card__text">
-            Vi utvecklar metoder för säker hantering av känsliga vårddata enligt gällande regelverk.
-          </p>
-        </div>
-
-        <div class="about-card">
-          <div class="about-card__icon">
-            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-            </svg>
-          </div>
-          <h3 class="about-card__title">Regional samverkan</h3>
-          <p class="about-card__text">
-            Alla 21 regioner samverkar för att skapa gemensamma lösningar och standarder.
-          </p>
-        </div>
-
-        <div class="about-card">
-          <div class="about-card__icon">
-            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-            </svg>
-          </div>
-          <h3 class="about-card__title">Bättre uppföljning</h3>
-          <p class="about-card__text">
-            Målet är att möjliggöra bättre uppföljning och analys för en mer effektiv vård.
-          </p>
-        </div>
-
-        <div class="about-card">
-          <div class="about-card__icon">
-            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-            </svg>
-          </div>
-          <h3 class="about-card__title">Kunskapsdelning</h3>
-          <p class="about-card__text">
-            Vi delar kunskap och erfarenheter mellan regioner för ökad digital mognad.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Contact Section -->
   <section id="kontakt" class="section contact">
     <div class="container">
       <div class="contact__content">
         <h2 class="contact__title">Kontakta oss</h2>
         <p class="contact__text">
-          Har du frågor om Kompetenscentrum hälsodata eller våra delprojekt?
-          Tveka inte att höra av dig.
+          Har du frågor om Kompetenscentrum hälsodata eller våra delprojekt? Tveka inte att höra av dig.
         </p>
-        <a href="mailto:kchd@example.se" class="contact__email">
-          <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-          </svg>
-          kchd@example.se
-        </a>
+        <div class="contact__info">
+          <div class="contact__person">
+            <strong>Peder Hofman-Bang</strong>
+            <span>Programledare</span>
+          </div>
+          <a href="mailto:peder.hofman-bang@skr.se" class="contact__email">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            peder.hofman-bang@skr.se
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -312,27 +496,34 @@
         <div>
           <div class="footer__title">Snabblänkar</div>
           <ul class="footer__links">
+            <li><a href="#vision" class="footer__link">Vision och mål</a></li>
             <li><a href="#delprojekt" class="footer__link">Delprojekt</a></li>
-            <li><a href="#dokument" class="footer__link">Dokument</a></li>
+            <li><a href="#tidsplan" class="footer__link">Tidsplan</a></li>
             <li><a href="#om" class="footer__link">Om oss</a></li>
+            <li><a href="#samverkan" class="footer__link">Samverkan</a></li>
+            <li><a href="#dokument" class="footer__link">Dokument</a></li>
             <li><a href="#kontakt" class="footer__link">Kontakt</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="footer__title">Projektet</div>
-          <ul class="footer__links">
-            <li><a href="projektet.html" class="footer__link">Regiongemensam vårddatahantering</a></li>
-            <li><a href="https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/regiongemensamvarddatahantering.89146.html" target="_blank" rel="noopener" class="footer__link">Kunskapsstyrning (officiell)</a></li>
           </ul>
         </div>
         <div>
           <div class="footer__title">Delprojekt</div>
           <ul class="footer__links">
-            <li><a href="#" class="footer__link">Väntetider och Patientregistret</a></li>
-            <li><a href="#" class="footer__link">Ramverk DM & DG</a></li>
-            <li><a href="#" class="footer__link">Variabelharmonisering</a></li>
-            <li><a href="#" class="footer__link">Datakatalog</a></li>
-            <li><a href="#" class="footer__link">Juridiska förutsättningar</a></li>
+            <li><a href="pilot-vantetider.html" class="footer__link">Väntetider och PAR</a></li>
+            <li><a href="pilot-ramverk.html" class="footer__link">Ramverk DM & DG</a></li>
+            <li><a href="utredning-variabelharmonisering.html" class="footer__link">Variabelharmonisering</a></li>
+            <li><a href="utredning-metadatakatalog.html" class="footer__link">Metadatakatalog</a></li>
+            <li><a href="utredning-juridik.html" class="footer__link">Juridiska förutsättningar</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__title">Kontakt</div>
+          <ul class="footer__links">
+            <li class="footer__contact-item">Peder Hofman-Bang, programledare</li>
+            <li><a href="mailto:peder.hofman-bang@skr.se" class="footer__link">peder.hofman-bang@skr.se</a></li>
+          </ul>
+          <div class="footer__title" style="margin-top: var(--spacing-6);">Externa länkar</div>
+          <ul class="footer__links">
+            <li><a href="https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/regiongemensamvarddatahantering.89146.html" target="_blank" rel="noopener" class="footer__link">Kunskapsstyrning (officiell)</a></li>
           </ul>
         </div>
       </div>
