@@ -33,6 +33,7 @@
             <li><a href="utredning-juridik.html" class="nav__dropdown-link"><span class="nav__dropdown-tag nav__dropdown-tag--utredning">Utredning</span>Juridiska förutsättningar</a></li>
           </ul>
         </li>
+        <li><a href="#vision" class="nav__link">Vision & Mål</a></li>
         <li><a href="#tidsplan" class="nav__link">Tidsplan</a></li>
         <li><a href="#om" class="nav__link">Om oss</a></li>
         <li><a href="#samverkan" class="nav__link">Samverkan</a></li>
@@ -42,6 +43,13 @@
       </ul>
     </div>
   </nav>
+
+  <!-- Info Banner -->
+  <div class="info-banner">
+    <div class="container">
+      <p class="info-banner__text">Officiell information och beslutsdokument finns på <a href="https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/regiongemensamvarddatahantering.89146.html" target="_blank" rel="noopener">kunskapsstyrningvard.se</a></p>
+    </div>
+  </div>
 
   <!-- Hero Section with Image -->
   <section class="hero hero--image">
@@ -59,22 +67,7 @@
     </div>
   </section>
 
-  <!-- Disclaimer -->
-  <div class="container">
-    <div class="alert alert--warning">
-      <svg class="alert__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-      </svg>
-      <div class="alert__content">
-        <div class="alert__title">Informationssida under uppbyggnad</div>
-        <p>Officiell information och beslutsdokument finns på
-          <a href="https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/regiongemensamvarddatahantering.89146.html" target="_blank" rel="noopener">kunskapsstyrningvard.se</a>
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Delprojekt Section - MOVED UP -->
+  <!-- Delprojekt Section -->
   <section id="delprojekt" class="cards-section">
     <div class="container">
       <div class="cards-section__header">
@@ -415,6 +408,7 @@
           <p class="background-card__text">
             Fastställde vilka variabler som behöver samlas in från vårdinformationssystemen, baserat på de prioriterade användningsfallen. Resultatet utgör grunden för framtida variabelharmonisering.
           </p>
+          <a href="#" class="background-card__report-link">Rapport</a>
         </article>
 
         <!-- Delprojekt 2: Regionernas dataförmågor -->
@@ -426,6 +420,7 @@
           <p class="background-card__text">
             Analyserade regionernas mognad inom datahantering och tog fram rekommendationer för hur regionerna kan arbeta med datakvalitet och data governance inom standardiserade ramverk.
           </p>
+          <a href="#" class="background-card__report-link">Rapport</a>
         </article>
 
         <!-- Delprojekt 3: Användningsfall -->
@@ -437,6 +432,7 @@
           <p class="background-card__text">
             Identifierade och prioriterade relevanta användningsfall för analys och styrning av hälso- och sjukvård. Tillsammans med variablerna utgör detta grunden för framtida utveckling.
           </p>
+          <a href="#" class="background-card__report-link">Rapport</a>
         </article>
 
         <!-- Delprojekt 4: Vårddatahubb -->
@@ -448,6 +444,7 @@
           <p class="background-card__text">
             Tog fram rekommendationer kring tekniska krav och designkriterier för en gemensam lösning för vårddata. Beskriver den tekniska arkitekturen för en regiongemensam vårddatahubb.
           </p>
+          <a href="#" class="background-card__report-link">Rapport</a>
         </article>
 
         <!-- Delprojekt 5: Kompetenscentrum -->
@@ -459,13 +456,20 @@
           <p class="background-card__text">
             Tog fram förslag för hur ett kompetenscentrum kan utformas – vilka funktioner och förmågor det behöver samt hur det ska samordnas. Detta delprojekt är grunden för KCHD.
           </p>
+          <a href="#" class="background-card__report-link">Rapport</a>
         </article>
-      </div>
 
-      <div class="text-center" style="margin-top: var(--spacing-10);">
-        <a href="https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/regiongemensamhanteringavvarddata.89146.html" target="_blank" rel="noopener" class="btn btn--primary">
-          Läs slutrapporten
-        </a>
+        <!-- Länkar och resurser -->
+        <article class="background-card background-card--links">
+          <div class="background-card__header">
+            <h3 class="background-card__title">Resurser</h3>
+          </div>
+          <div class="background-card__buttons">
+            <a href="https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/regiongemensamhanteringavvarddata.89146.html" target="_blank" rel="noopener" class="btn btn--secondary btn--small">Officiell webb</a>
+            <a href="https://kunskapsstyrningvard.se/download/18.73f60cd7197a1a30e6c8058e/1751633546364/Regiongemensam-hantering-av-varddata-slutrapport-2025-07-04.pdf" target="_blank" rel="noopener" class="btn btn--primary btn--small">Slutrapport</a>
+            <a href="https://pederhofmanbang.github.io/kchd/projektet" class="btn btn--secondary btn--small">Filmer och nedladdningar</a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
