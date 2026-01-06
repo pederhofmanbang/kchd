@@ -18,6 +18,7 @@
         <div class="nav__logo">KC</div>
         <span>Kompetenscentrum Hälsodata</span>
       </a>
+      <span class="nav__beta-badge">Beta</span>
       <button class="nav__toggle" aria-label="Öppna meny" aria-expanded="false">
         <span class="nav__toggle-icon"></span>
       </button>
@@ -41,13 +42,17 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
+  <!-- Hero Section with Image -->
+  <section class="hero hero--image">
+    <div class="hero__background">
+      <img src="images/hero-doctors.jpg" alt="Läkare i möte med hälsodata på skärm" class="hero__bg-image">
+      <div class="hero__overlay"></div>
+    </div>
     <div class="container">
       <div class="hero__content">
         <h1 class="hero__title">Kompetenscentrum Hälsodata</h1>
         <p class="hero__subtitle">
-          Sveriges regioners gemensamma resurs för att samordna, utveckla och tillgängliggöra hälsodata för bättre styrning, uppföljning, analys, forskning och innovation.
+          Kompetenscentrum för regiongemensam hälsodatahantering (KCHD) är under uppbyggnad och har som mål att bli Sveriges regioners gemensamma resurs för att samordna, utveckla och tillgängliggöra hälsodata. Vi skapar förutsättningar för bättre styrning, uppföljning, analys, forskning och innovation inom hälso- och sjukvården.
         </p>
       </div>
     </div>
@@ -61,71 +66,14 @@
       </svg>
       <div class="alert__content">
         <div class="alert__title">Informationssida under uppbyggnad</div>
-        <p>Detta är en informationssida under uppbyggnad. Officiell information och beslutsdokument finns på
+        <p>Officiell information och beslutsdokument finns på
           <a href="https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/regiongemensamvarddatahantering.89146.html" target="_blank" rel="noopener">kunskapsstyrningvard.se</a>
         </p>
       </div>
     </div>
   </div>
 
-  <!-- Vision Section - Two Column -->
-  <section id="vision" class="section">
-    <div class="container">
-      <div class="two-col">
-        <div class="two-col__content">
-          <span class="two-col__label">Vision</span>
-          <h2 class="two-col__title">Den gemensamma arenan för regionernas hälsodata</h2>
-          <p class="two-col__text">
-            KCHD ska vara den gemensamma arenan för regionerna när det gäller hälsodata för sekundäranvändning – en nationell nod som säkerställer att data kan användas på ett likvärdigt, säkert och effektivt sätt.
-          </p>
-          <p class="two-col__text">
-            Vi skapar förutsättningar för bättre styrning, uppföljning, analys, forskning och innovation inom hälso- och sjukvården.
-          </p>
-        </div>
-        <div class="two-col__illustration">
-          <svg width="120" height="120" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="opacity: 0.3;">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-          </svg>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Quote Section -->
-  <section class="quote-section">
-    <div class="container">
-      <div class="quote-section__content">
-        <p class="quote-section__text">
-          "Kompetenscentrumet ska vara den nationella noden som säkerställer att regionernas hälsodata kan användas på ett likvärdigt, säkert och effektivt sätt."
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Goals Section - Two Column Reverse -->
-  <section class="section">
-    <div class="container">
-      <div class="two-col two-col--reverse">
-        <div class="two-col__content">
-          <span class="two-col__label">Mål 2025–2026</span>
-          <h2 class="two-col__title">Från uppbyggnad till praktiskt resultat</h2>
-          <p class="two-col__text">
-            Under verksamhetsperioden 2025–2026 fokuserar vi på att etablera en struktur för regiongemensam vårddatahantering, utveckla arbetsformer mellan KCHD, regionerna och andra aktörer, samt genom pilotprojekt visa hur datakvalitet kan förbättras.
-          </p>
-          <p class="two-col__text">
-            Vi bidrar även till förberedelserna för en framtida vårddatahubb och säkerställer att regionernas rådighet över sin egen data stärks.
-          </p>
-        </div>
-        <div class="two-col__illustration">
-          <svg width="120" height="120" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="opacity: 0.3;">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-          </svg>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Delprojekt Section -->
+  <!-- Delprojekt Section - MOVED UP -->
   <section id="delprojekt" class="cards-section">
     <div class="container">
       <div class="cards-section__header">
@@ -220,6 +168,63 @@
             <a href="utredning-juridik.html" class="project-card__link">Läs mer</a>
           </div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision Section - MOVED DOWN -->
+  <section id="vision" class="section">
+    <div class="container">
+      <div class="two-col">
+        <div class="two-col__content">
+          <span class="two-col__label">Vision</span>
+          <h2 class="two-col__title">Den gemensamma arenan för regionernas hälsodata</h2>
+          <p class="two-col__text">
+            KCHD ska vara den gemensamma arenan för regionerna när det gäller hälsodata för sekundäranvändning – en nationell nod som säkerställer att data kan användas på ett likvärdigt, säkert och effektivt sätt.
+          </p>
+          <p class="two-col__text">
+            Vi skapar förutsättningar för bättre styrning, uppföljning, analys, forskning och innovation inom hälso- och sjukvården.
+          </p>
+        </div>
+        <div class="two-col__illustration">
+          <svg width="120" height="120" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="opacity: 0.3;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Section -->
+  <section class="quote-section">
+    <div class="container">
+      <div class="quote-section__content">
+        <p class="quote-section__text">
+          "Kompetenscentrumet ska vara den nationella noden som säkerställer att regionernas hälsodata kan användas på ett likvärdigt, säkert och effektivt sätt."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Goals Section - Two Column Reverse -->
+  <section class="section">
+    <div class="container">
+      <div class="two-col two-col--reverse">
+        <div class="two-col__content">
+          <span class="two-col__label">Mål 2025–2026</span>
+          <h2 class="two-col__title">Från uppbyggnad till praktiskt resultat</h2>
+          <p class="two-col__text">
+            Under verksamhetsperioden 2025–2026 fokuserar vi på att etablera en struktur för regiongemensam vårddatahantering, utveckla arbetsformer mellan KCHD, regionerna och andra aktörer, samt genom pilotprojekt visa hur datakvalitet kan förbättras.
+          </p>
+          <p class="two-col__text">
+            Vi bidrar även till förberedelserna för en framtida vårddatahubb och säkerställer att regionernas rådighet över sin egen data stärks.
+          </p>
+        </div>
+        <div class="two-col__illustration">
+          <svg width="120" height="120" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="opacity: 0.3;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+          </svg>
+        </div>
       </div>
     </div>
   </section>
@@ -425,12 +430,21 @@
       <p class="contact-section__text">
         Har du frågor om Kompetenscentrum hälsodata eller våra delprojekt?
       </p>
-      <div style="margin-top: var(--spacing-4);">
-        <p style="font-weight: 600; color: var(--color-gray-900);">Peder Hofman-Bang</p>
-        <p style="color: var(--color-gray-500); margin-bottom: var(--spacing-3);">Programledare</p>
-        <a href="mailto:peder.hofman-bang@skr.se" class="contact-section__link">
-          peder.hofman-bang@skr.se
-        </a>
+      <div class="contact-grid">
+        <div class="contact-person">
+          <p class="contact-person__name">Catarina Karlberg</p>
+          <p class="contact-person__role">Ordförande, NAG Kompetenscentrum</p>
+          <a href="mailto:catarina.karlberg@vgregion.se" class="contact-section__link">
+            catarina.karlberg@vgregion.se
+          </a>
+        </div>
+        <div class="contact-person">
+          <p class="contact-person__name">Peder Hofman-Bang</p>
+          <p class="contact-person__role">Samordnare</p>
+          <a href="mailto:peder.hofman-bang@skr.se" class="contact-section__link">
+            peder.hofman-bang@skr.se
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -449,8 +463,8 @@
         <div>
           <div class="footer__title">Snabblänkar</div>
           <ul class="footer__links">
-            <li><a href="#vision" class="footer__link">Vision och mål</a></li>
             <li><a href="#delprojekt" class="footer__link">Delprojekt</a></li>
+            <li><a href="#vision" class="footer__link">Vision och mål</a></li>
             <li><a href="#tidsplan" class="footer__link">Tidsplan</a></li>
             <li><a href="#om" class="footer__link">Om oss</a></li>
             <li><a href="#samverkan" class="footer__link">Samverkan</a></li>
@@ -471,7 +485,9 @@
         <div>
           <div class="footer__title">Kontakt</div>
           <ul class="footer__links">
-            <li class="footer__contact-item">Peder Hofman-Bang, programledare</li>
+            <li class="footer__contact-item">Catarina Karlberg, ordförande</li>
+            <li><a href="mailto:catarina.karlberg@vgregion.se" class="footer__link">catarina.karlberg@vgregion.se</a></li>
+            <li class="footer__contact-item" style="margin-top: var(--spacing-2);">Peder Hofman-Bang, samordnare</li>
             <li><a href="mailto:peder.hofman-bang@skr.se" class="footer__link">peder.hofman-bang@skr.se</a></li>
           </ul>
           <div class="footer__title" style="margin-top: var(--spacing-6);">Externa länkar</div>
