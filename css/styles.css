@@ -702,7 +702,8 @@ p {
   background: linear-gradient(135deg, var(--color-secondary) 0%, #003a52 100%);
 }
 
-.project-card__image img {
+.project-card__image img,
+.project-card__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1742,10 +1743,44 @@ p {
 .background-card__buttons {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-3);
+  gap: var(--spacing-4);
 }
 
 .background-card__buttons .btn {
   width: 100%;
   text-align: center;
+}
+
+/* Gröna knappvarianter för resurser-rutan */
+.btn--green-dark {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+  border: none;
+}
+
+.btn--green-dark:hover {
+  background-color: #1f4a48;
+  color: var(--color-white);
+}
+
+.btn--green-medium {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+}
+
+.btn--green-medium:hover {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+}
+
+.btn--green-light {
+  background-color: var(--color-primary-light);
+  color: var(--color-white);
+  border: none;
+}
+
+.btn--green-light:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }
