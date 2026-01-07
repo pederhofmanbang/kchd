@@ -128,6 +128,8 @@
     }
 
     documentsGrid.innerHTML = documents.map(doc => createDocumentCard(doc)).join('');
+    // Rendera PDF-thumbnails efter att korten skapats
+    renderPdfThumbnails();
   }
 
   /**
@@ -146,11 +148,15 @@
     }
 
     const filePath = doc.src || `dokument/${doc.filnamn}`;
+    const cardId = 'pdf-' + btoa(filePath).replace(/[^a-zA-Z0-9]/g, '').substring(0, 20);
 
     return `
-      <article class="document-card" data-tags="${(doc.tags || []).join(' ')}">
+      <article class="document-card" data-tags="${(doc.tags || []).join(' ')}" data-pdf-src="${filePath}" id="${cardId}">
         <div class="document-card__preview">
-          ${getFileIcon(fileType)}
+          <canvas class="document-card__canvas"></canvas>
+          <div class="document-card__icon-fallback">
+            ${getFileIcon(fileType)}
+          </div>
         </div>
         <div class="document-card__body">
           <h3 class="document-card__title">${doc.titel}</h3>
@@ -169,6 +175,59 @@
         </div>
       </article>
     `;
+  }
+
+  /**
+   * Rendera PDF-thumbnails för alla dokumentkort
+   */
+  async function renderPdfThumbnails() {
+    if (typeof pdfjsLib === 'undefined') return;
+
+    const cards = document.querySelectorAll('.document-card[data-pdf-src]');
+
+    for (const card of cards) {
+      const pdfSrc = card.dataset.pdfSrc;
+      const canvas = card.querySelector('.document-card__canvas');
+      const fallback = card.querySelector('.document-card__icon-fallback');
+
+      if (!canvas || !pdfSrc) continue;
+
+      try {
+        const pdf = await pdfjsLib.getDocument(pdfSrc).promise;
+        const page = await pdf.getPage(1);
+
+        const previewContainer = card.querySelector('.document-card__preview');
+        const containerWidth = previewContainer.offsetWidth || 300;
+        const containerHeight = previewContainer.offsetHeight || 180;
+
+        const viewport = page.getViewport({ scale: 1 });
+        const scale = Math.min(
+          containerWidth / viewport.width,
+          containerHeight / viewport.height
+        ) * 1.5; // Lite högre upplösning
+
+        const scaledViewport = page.getViewport({ scale });
+
+        canvas.width = scaledViewport.width;
+        canvas.height = scaledViewport.height;
+
+        const context = canvas.getContext('2d');
+        await page.render({
+          canvasContext: context,
+          viewport: scaledViewport
+        }).promise;
+
+        // Dölj fallback-ikonen, visa canvas
+        canvas.style.display = 'block';
+        if (fallback) fallback.style.display = 'none';
+
+      } catch (error) {
+        // Vid fel, visa fallback-ikonen
+        console.warn('Kunde inte ladda PDF-thumbnail för:', pdfSrc);
+        canvas.style.display = 'none';
+        if (fallback) fallback.style.display = 'flex';
+      }
+    }
   }
 
   /**
