@@ -135,32 +135,27 @@
    */
   function createDocumentCard(doc) {
     const fileType = getFileType(doc.filnamn || doc.src || '');
-    const iconClass = fileType === 'pdf' ? 'document-card__icon--pdf' : 'document-card__icon--ppt';
 
-    // Skapa taggar
-    const tags = [];
-    if (doc.kategori) {
-      tags.push(`<span class="document-card__tag">${doc.kategori}</span>`);
-    }
-    if (doc.delprojekt) {
-      const delprojektArray = Array.isArray(doc.delprojekt) ? doc.delprojekt : [doc.delprojekt];
-      delprojektArray.forEach(dp => {
-        const tagClass = dp.startsWith('pilot') ? 'document-card__tag--pilot' : 'document-card__tag--utredning';
-        tags.push(`<span class="document-card__tag ${tagClass}">${getDelprojektLabel(dp)}</span>`);
+    // Skapa taggar från tags-array
+    const tagElements = [];
+    if (doc.tags && Array.isArray(doc.tags)) {
+      doc.tags.forEach(tag => {
+        const tagClass = getTagClass(tag);
+        tagElements.push(`<span class="document-card__tag ${tagClass}">${getTagLabel(tag)}</span>`);
       });
     }
 
     const filePath = doc.src || `dokument/${doc.filnamn}`;
 
     return `
-      <article class="document-card" data-kategori="${doc.kategori || ''}" data-delprojekt="${(Array.isArray(doc.delprojekt) ? doc.delprojekt : [doc.delprojekt]).join(' ')}">
+      <article class="document-card" data-tags="${(doc.tags || []).join(' ')}">
         <div class="document-card__preview">
           ${getFileIcon(fileType)}
         </div>
         <div class="document-card__body">
           <h3 class="document-card__title">${doc.titel}</h3>
           <div class="document-card__meta">
-            ${tags.join('')}
+            ${tagElements.join('')}
           </div>
           ${doc.datum ? `<div class="document-card__date">${formatDate(doc.datum)}</div>` : ''}
         </div>
@@ -212,17 +207,31 @@
   }
 
   /**
-   * Konvertera delprojekt-ID till läsbar etikett
+   * Konvertera tag-ID till läsbar etikett
    */
-  function getDelprojektLabel(id) {
+  function getTagLabel(tag) {
     const labels = {
-      'pilot-1': 'Väntetider',
-      'pilot-2': 'Ramverk',
-      'utredning-1': 'Variabelharmonisering',
-      'utredning-2': 'Datakatalog',
-      'utredning-3': 'Juridik'
+      'rapport': 'Rapport',
+      'generellt': 'Generellt',
+      'bakgrund': 'Bakgrund',
+      'pilot-vantetider': 'Pilot: Väntetider',
+      'pilot-ramverk': 'Pilot: Ramverk',
+      'variabelharmonisering': 'Variabelharmonisering',
+      'metadatakatalog': 'Metadatakatalog',
+      'juridik': 'Juridik'
     };
-    return labels[id] || id;
+    return labels[tag] || tag;
+  }
+
+  /**
+   * Hämta CSS-klass för tag
+   */
+  function getTagClass(tag) {
+    if (tag.startsWith('pilot-')) return 'document-card__tag--pilot';
+    if (['variabelharmonisering', 'metadatakatalog', 'juridik'].includes(tag)) return 'document-card__tag--utredning';
+    if (tag === 'bakgrund') return 'document-card__tag--bakgrund';
+    if (tag === 'generellt') return 'document-card__tag--generellt';
+    return '';
   }
 
   /**
@@ -247,13 +256,10 @@
     }
 
     const filtered = allDocuments.filter(doc => {
-      // Kolla kategori
-      if (doc.kategori === filter) return true;
-
-      // Kolla delprojekt
-      const delprojekt = Array.isArray(doc.delprojekt) ? doc.delprojekt : [doc.delprojekt];
-      if (delprojekt.includes(filter)) return true;
-
+      // Kolla om taggen finns i dokumentets tags-array
+      if (doc.tags && Array.isArray(doc.tags)) {
+        return doc.tags.includes(filter);
+      }
       return false;
     });
 
