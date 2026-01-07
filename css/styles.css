@@ -566,6 +566,23 @@ p {
   object-fit: cover;
 }
 
+/* Logo variant för two-col image */
+.two-col__image--logo {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-12);
+}
+
+.two-col__image--logo img {
+  width: auto;
+  height: auto;
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
+}
+
 /* Illustration placeholder */
 .two-col__illustration {
   display: flex;
