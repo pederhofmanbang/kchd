@@ -2,65 +2,64 @@
   {
     "titel": "Värde med projektförslag för vårddatahubb",
     "beskrivning": "Nyttor och värde med föreslagna insatser",
-    "kategori": "rapport",
-    "delprojekt": [],
+    "tags": ["generellt"],
     "datum": "2025-05-16",
     "src": "rapporter/varde-projektforslag-varddatahubb-250516.pdf"
   },
   {
     "titel": "Inceptionrapport",
     "beskrivning": "Initial rapport för projektets uppstart",
-    "kategori": "rapport",
-    "delprojekt": [],
+    "tags": ["rapport", "bakgrund"],
     "datum": "2024-03-01",
     "src": "rapporter/Deliverable1-Inception-report.pdf"
   },
   {
     "titel": "Delprojekt 1: Variabler",
     "beskrivning": "Definitioner och strukturering av variabler",
-    "kategori": "rapport",
-    "delprojekt": ["utredning-1"],
+    "tags": ["rapport", "variabelharmonisering", "bakgrund"],
     "datum": "2024-06-01",
     "src": "rapporter/Delprojekt-1-Variabler.pdf"
   },
   {
     "titel": "Delprojekt 2: Dataförmågor",
     "beskrivning": "Beskrivning av datakapacitet och krav",
-    "kategori": "rapport",
-    "delprojekt": ["utredning-2"],
+    "tags": ["rapport", "pilot-ramverk", "bakgrund"],
     "datum": "2024-06-15",
     "src": "rapporter/Delprojekt-2-dataformagor.pdf"
   },
   {
     "titel": "Delprojekt 3: Användningsfall",
     "beskrivning": "Exempel och analysbehov för vårdgenererad data",
-    "kategori": "rapport",
-    "delprojekt": [],
+    "tags": ["rapport", "generellt", "bakgrund"],
     "datum": "2024-07-01",
     "src": "rapporter/Delprojekt-3-Anvandningsfall.pdf"
   },
   {
     "titel": "Delprojekt 4: Vårddatahubb",
     "beskrivning": "Arkitektur och förslag på gemensam hubb",
-    "kategori": "rapport",
-    "delprojekt": [],
+    "tags": ["rapport", "bakgrund", "pilot-vantetider"],
     "datum": "2024-08-01",
     "src": "rapporter/Delprojekt-4-Varddatahubb.pdf"
   },
   {
     "titel": "Delprojekt 5: Kompetenscentrum",
     "beskrivning": "Förslag på organisation och uppdrag",
-    "kategori": "rapport",
-    "delprojekt": [],
+    "tags": ["rapport", "bakgrund"],
     "datum": "2024-09-01",
     "src": "rapporter/Delprojekt-5-Kompetenscentrum.pdf"
   },
   {
     "titel": "Nulägesrapport",
     "beskrivning": "Analys av nuläge i regionerna",
-    "kategori": "rapport",
-    "delprojekt": [],
+    "tags": ["rapport", "bakgrund"],
     "datum": "2024-05-01",
     "src": "rapporter/Leverabel2-Nulägesrapport.pdf"
+  },
+  {
+    "titel": "Slutrapport",
+    "beskrivning": "Regiongemensam hantering av vårddata - Slutrapport",
+    "tags": ["rapport", "bakgrund"],
+    "datum": "2025-07-04",
+    "src": "https://kunskapsstyrningvard.se/download/18.73f60cd7197a1a30e6c8058e/1751633546364/Regiongemensam-hantering-av-varddata-slutrapport-2025-07-04.pdf"
   }
 ]
